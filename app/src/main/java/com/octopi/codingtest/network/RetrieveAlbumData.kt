@@ -31,10 +31,10 @@ class RetrieveAlbumData(
             ) {
                 loadingDialog.dismiss()
                 if (response.isSuccessful) {
-                    if (response.body() != null && response.body()!!.size != 0)
-                        callback.albumListCallback(response.body()!!)
-                    Log.d(tag, "album data found, list first id: ${response.body()?.get(0)?.id}")
+                    val albumData:AlbumData = response.body()!!
+                    callback.albumListCallback(albumData)
                 } else {
+                    callback.albumListCallback(null)
                     Log.d(tag, "album data not found")
                 }
             }

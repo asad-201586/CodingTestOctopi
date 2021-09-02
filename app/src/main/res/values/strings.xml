@@ -2,4 +2,9 @@
     <string name="app_name">CodingTestOctopi</string>
     <string name="previous_album">Previous Album</string>
     <string name="next_album">Next Album</string>
+    <string name="todo">TODO</string>
+    <string name="albumid">AlbumId:</string>
+    <string name="id">Id:</string>
+    <string name="title">Title:</string>
+    <string name="no_album_found">No Album Found</string>
 </resources>

@@ -19,11 +19,10 @@ class MainViewModel :  ViewModel(){
     fun getAlbumData(albumId:Int,context: Context){
         Log.d(tag, "albumListCallback: id: $albumId")
         val retrieveAlbumData = RetrieveAlbumData(context,albumId.toString(),object : AlbumCallback{
-            override fun albumListCallback(albumData: AlbumData) {
-                Log.d(tag, "albumListCallback: id: ${albumData[0].id}")
-                Log.d(tag, "albumListCallback: id: ${albumData[1].id}")
+            override fun albumListCallback(albumData: AlbumData?) {
+
                 albumLiveDataObject.value = albumData
-                Log.e(tag, "albumListCallback: ${albumData.size}" )
+
             }
         })
         retrieveAlbumData.getAlbums()

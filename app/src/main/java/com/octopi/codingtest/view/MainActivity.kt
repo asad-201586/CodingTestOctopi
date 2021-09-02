@@ -3,6 +3,7 @@ package com.octopi.codingtest.view
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import androidx.recyclerview.widget.GridLayoutManager
 import com.octopi.codingtest.databinding.ActivityMainBinding
 import com.octopi.codingtest.other.GridSpacingItemDecoration
@@ -13,7 +14,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var binding:ActivityMainBinding
     private lateinit var adapter:AlbumAdapter
     private val mainViewModel:MainViewModel by lazy { MainViewModel() }
-    private var albumId:Int = 1
+    private var albumId:Int = 98
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,11 +30,20 @@ class MainActivity : AppCompatActivity() {
     private fun initializeObservers() {
         mainViewModel.albumLiveData.observe(this, {
 
-            adapter = AlbumAdapter(this, it)
-            binding.albumRv.adapter = adapter
+            if (it != null && it.size != 0){
+                binding.albumRv.visibility = View.VISIBLE
+                binding.textNoAlbumFound.visibility = View.GONE
 
-            Log.d("test_main", "onCreate: id1: ${it[0].id}")
-            Log.d("test_main", "onCreate: id2: ${it[1].id}")
+                adapter = AlbumAdapter(this, it)
+                binding.albumRv.adapter = adapter
+
+                Log.d("test_main", "onCreate: size: ${it.size}")
+
+            }else{
+                binding.albumRv.visibility = View.GONE
+                binding.textNoAlbumFound.visibility = View.VISIBLE
+            }
+
         })
     }
 

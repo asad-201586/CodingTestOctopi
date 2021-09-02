@@ -7,6 +7,17 @@
     android:layout_height="match_parent"
     tools:context=".view.MainActivity">
 
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/text_no_album_found"
+        android:text="@string/no_album_found"
+        android:textStyle="bold"
+        android:textSize="@dimen/_20ssp"
+        android:textColor="@color/black"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         app:title="Album"

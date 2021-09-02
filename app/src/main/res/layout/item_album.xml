@@ -16,7 +16,8 @@
             android:scaleType="centerCrop"
             android:src="@drawable/item_sample"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_150sdp"/>
+            android:layout_height="@dimen/_150sdp"
+            android:contentDescription="@string/todo" />
 
     </androidx.cardview.widget.CardView>
 
