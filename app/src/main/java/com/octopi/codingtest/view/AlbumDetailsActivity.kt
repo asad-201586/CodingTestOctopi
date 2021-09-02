@@ -17,11 +17,15 @@ class AlbumDetailsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
+        getData()
+        setData()
+
+    }
+
+    private fun getData() {
         if (intent.hasExtra("data")) {
             data = intent.getSerializableExtra("data") as AlbumDataItem
         }
-        setData()
-
     }
 
     private fun setData() {
