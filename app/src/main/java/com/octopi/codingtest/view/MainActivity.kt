@@ -1,9 +1,8 @@
 package com.octopi.codingtest.view
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
 import com.octopi.codingtest.databinding.ActivityMainBinding
 import com.octopi.codingtest.other.GridSpacingItemDecoration
@@ -14,7 +13,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var binding:ActivityMainBinding
     private lateinit var adapter:AlbumAdapter
     private val mainViewModel:MainViewModel by lazy { MainViewModel() }
-    private var albumId:Int = 98
+    private var albumId:Int = 1
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,8 +35,7 @@ class MainActivity : AppCompatActivity() {
 
                 adapter = AlbumAdapter(this, it)
                 binding.albumRv.adapter = adapter
-
-                Log.d("test_main", "onCreate: size: ${it.size}")
+                binding.albumRv.notifyDataSetChanged()
 
             }else{
                 binding.albumRv.visibility = View.GONE

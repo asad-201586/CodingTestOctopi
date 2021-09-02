@@ -30,7 +30,7 @@
         android:layout_alignParentTop="true"
         />
 
-    <androidx.recyclerview.widget.RecyclerView
+    <com.mlsdev.animatedrv.AnimatedRecyclerView
         android:id="@+id/album_rv"
         android:layout_above="@+id/layout_next_and_prev"
         android:layout_width="match_parent"

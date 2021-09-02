@@ -66,10 +66,10 @@ dependencies {
     //gson
     implementation 'com.google.code.gson:gson:2.8.8'
 
-    //swipe refresh layout
-    implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.1.0"
-
     //lottie
     implementation "com.airbnb.android:lottie:3.6.1"
+
+    //rv animation
+    implementation "com.mlsdev.animatedrv:library:2.0.0"
 
 }
