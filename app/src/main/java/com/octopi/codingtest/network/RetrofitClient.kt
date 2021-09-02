@@ -15,7 +15,7 @@ class RetrofitClient {
     }
 
     companion object{
-        var retrofitClient: RetrofitClient? = null
+        private var retrofitClient: RetrofitClient? = null
         @Synchronized
         fun getInstance(): RetrofitClient? {
             if (retrofitClient == null)

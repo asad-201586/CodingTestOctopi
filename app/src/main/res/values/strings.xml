@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">CodingTestOctopi</string>
+    <string name="previous_album">Previous Album</string>
+    <string name="next_album">Next Album</string>
 </resources>

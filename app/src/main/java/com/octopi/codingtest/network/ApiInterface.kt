@@ -5,9 +5,9 @@ import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Url
 
-public interface ApiInterface {
+interface ApiInterface {
     @GET
-    fun AllAlbums(
+    fun allAlbums(
         @Url url:String
     ): Call<AlbumData>
 }

@@ -2,6 +2,7 @@ package com.octopi.codingtest.model
 
 
 import com.google.gson.annotations.SerializedName
+import java.io.Serializable
 
 data class AlbumDataItem(
     @SerializedName("albumId")
@@ -14,4 +15,4 @@ data class AlbumDataItem(
     val title: String,
     @SerializedName("url")
     val url: String
-)
+) : Serializable

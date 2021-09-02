@@ -4,7 +4,8 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/projects/client/CodingTestOctopi/app/src/main/res/drawable/rectangle_back.xml" value="0.1712962962962963" />
-        <entry key="..\:/projects/client/CodingTestOctopi/app/src/main/res/layout/activity_main.xml" value="0.17" />
+        <entry key="..\:/projects/client/CodingTestOctopi/app/src/main/res/layout/activity_album_details.xml" value="0.25" />
+        <entry key="..\:/projects/client/CodingTestOctopi/app/src/main/res/layout/activity_main.xml" value="0.22" />
         <entry key="..\:/projects/client/CodingTestOctopi/app/src/main/res/layout/item_album.xml" value="0.21875" />
         <entry key="..\:/projects/client/CodingTestOctopi/app/src/main/res/layout/loading_layout.xml" value="0.21875" />
       </map>

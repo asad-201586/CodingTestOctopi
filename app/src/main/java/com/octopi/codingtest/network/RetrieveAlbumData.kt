@@ -14,7 +14,7 @@ class RetrieveAlbumData(
     private val albumId: String,
     var callback: AlbumCallback
 ) {
-    private val TAG: String? = this.javaClass.name
+    private val tag: String? = this.javaClass.name
     var loadingDialog: CustomLoadingDialog = CustomLoadingDialog(context)
 
     fun getAlbums(){
@@ -22,7 +22,7 @@ class RetrieveAlbumData(
         val call: Call<AlbumData> = RetrofitClient
             .getInstance()
             ?.getApi()
-            ?.AllAlbums("/photos?albumId=$albumId")!!
+            ?.allAlbums("/photos?albumId=$albumId")!!
 
         call.enqueue(object : Callback<AlbumData?> {
             override fun onResponse(
@@ -33,14 +33,14 @@ class RetrieveAlbumData(
                 if (response.isSuccessful) {
                     if (response.body() != null && response.body()!!.size != 0)
                         callback.albumListCallback(response.body()!!)
-                    Log.d(TAG, "album data found")
+                    Log.d(tag, "album data found, list first id: ${response.body()?.get(0)?.id}")
                 } else {
-                    Log.d(TAG, "album data not found")
+                    Log.d(tag, "album data not found")
                 }
             }
 
             override fun onFailure(call: Call<AlbumData?>, t: Throwable) {
-                Log.d(TAG, "onFailure: album data response failure: " + t.message)
+                Log.d(tag, "onFailure: album data response failure: " + t.message)
                 loadingDialog.dismiss()
                 Toast.makeText(context, t.message, Toast.LENGTH_SHORT).show()
             }
