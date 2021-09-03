@@ -10,7 +10,7 @@
     <TextView
         android:visibility="gone"
         android:id="@+id/text_no_album_found"
-        android:text="@string/no_album_found"
+        android:text="@string/album_is_empty"
         android:textStyle="bold"
         android:textSize="@dimen/_20ssp"
         android:textColor="@color/black"
@@ -32,9 +32,9 @@
 
     <com.mlsdev.animatedrv.AnimatedRecyclerView
         android:id="@+id/album_rv"
-        android:layout_above="@+id/layout_next_and_prev"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_above="@+id/layout_next_and_prev"
         android:layout_below="@+id/toolbar"
         tools:ignore="RtlSymmetry" />
 
